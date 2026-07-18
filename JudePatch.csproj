@@ -1,0 +1,115 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <LangVersion>preview</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="0Harmony">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\net6\0Harmony.dll</HintPath>
+        </Reference>
+        <Reference Include="Assembly-CSharp">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="Assembly-CSharp-firstpass">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Assembly-CSharp-firstpass.dll</HintPath>
+        </Reference>
+        <Reference Include="Iced">
+          <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\net6\Iced.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppCodestage.Anticheattoolkit.Runtime">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppCodestage.Anticheattoolkit.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppInterop.Common">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\net6\Il2CppInterop.Common.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppInterop.Generator">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\net6\Il2CppInterop.Generator.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppInterop.Runtime">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2Cppmscorlib">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppPhoton3Unity3D">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppPhoton3Unity3D.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppPhotonChat">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppPhotonChat.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppPhotonRealtime">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppPhotonRealtime.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppPhotonUnityNetworking">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppPhotonUnityNetworking.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppPhotonUnityNetworking.Utilities">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppPhotonUnityNetworking.Utilities.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppPhotonVoice">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppPhotonVoice.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppPhotonVoice.API">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppPhotonVoice.API.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppPhotonVoice.PUN">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppPhotonVoice.PUN.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppRecNet.Runtime">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppRecNet.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppRecRoom.Datastructures.Singletons.Runtime">
+          <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppRecRoom.Datastructures.Singletons.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppRecRoom.Networking.PhotonImpl.Runtime">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppRecRoom.Networking.PhotonImpl.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppRecRoom.Rranticheat.Runtime">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppRecRoom.Rranticheat.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppSystem">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppSystem.dll</HintPath>
+        </Reference>
+        <Reference Include="MelonLoader">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\net6\MelonLoader.dll</HintPath>
+        </Reference>
+        <Reference Include="MelonLoader.NativeHost">
+          <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\net6\MelonLoader.NativeHost.dll</HintPath>
+        </Reference>
+        <Reference Include="Mono.Cecil">
+          <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\net6\Mono.Cecil.dll</HintPath>
+        </Reference>
+        <Reference Include="Mono.Cecil.Mdb">
+          <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\net6\Mono.Cecil.Mdb.dll</HintPath>
+        </Reference>
+        <Reference Include="Mono.Cecil.Pdb">
+          <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\net6\Mono.Cecil.Pdb.dll</HintPath>
+        </Reference>
+        <Reference Include="Mono.Cecil.Rocks">
+          <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\net6\Mono.Cecil.Rocks.dll</HintPath>
+        </Reference>
+        <Reference Include="MonoMod.RuntimeDetour">
+          <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\net6\MonoMod.RuntimeDetour.dll</HintPath>
+        </Reference>
+        <Reference Include="MonoMod.Utils">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\net6\MonoMod.Utils.dll</HintPath>
+        </Reference>
+        <Reference Include="Newtonsoft.Json">
+          <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Managed\Newtonsoft.Json.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Utils\" />
+    </ItemGroup>
+   
+</Project>
