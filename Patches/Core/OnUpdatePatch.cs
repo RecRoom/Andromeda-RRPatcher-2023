@@ -1,9 +1,9 @@
 using HarmonyLib;
 using Il2CppCodeStage.AntiCheat.Detectors;
-using JudePatch.Utils;
+using JudePatch.Patches.Developer.Debugging;
 using UnityEngine;
 
-namespace Patches;
+namespace JudePatch.Patches.Core;
 
 [HarmonyPatch(typeof(RRCheatDetector), nameof(RRCheatDetector.Update))]
 public class OnUpdatePatch
@@ -13,9 +13,10 @@ public class OnUpdatePatch
     {
         if (__instance != null)
         {
-            if (Input.GetKey(KeyCode.F1))
+            if (Input.GetKeyDown(KeyCode.F1))
             {
-                tmpro.EnableAll();
+                    PhotonPeerPatch.Enable = !PhotonPeerPatch.Enable;
+                    AndromedaEngine.Debug.Console.Log($"IPhotonPeer set: {PhotonPeerPatch.Enable}\n");
             }
             return false;
         }

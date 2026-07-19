@@ -12,7 +12,7 @@
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="0Harmony">
-            <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\net6\0Harmony.dll</HintPath>
+          <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\net6\0Harmony.dll</HintPath>
         </Reference>
         <Reference Include="Assembly-CSharp">
             <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
@@ -68,8 +68,14 @@
         <Reference Include="Il2CppRecRoom.Datastructures.Singletons.Runtime">
           <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppRecRoom.Datastructures.Singletons.Runtime.dll</HintPath>
         </Reference>
+        <Reference Include="Il2CppRecRoom.Networking.NetworkedObjects.Runtime">
+          <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppRecRoom.Networking.NetworkedObjects.Runtime.dll</HintPath>
+        </Reference>
         <Reference Include="Il2CppRecRoom.Networking.PhotonImpl.Runtime">
             <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppRecRoom.Networking.PhotonImpl.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppRecRoom.Networking.RPC.Runtime">
+          <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppRecRoom.Networking.RPC.Runtime.dll</HintPath>
         </Reference>
         <Reference Include="Il2CppRecRoom.Rranticheat.Runtime">
             <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppRecRoom.Rranticheat.Runtime.dll</HintPath>

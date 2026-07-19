@@ -5,7 +5,7 @@ using Il2CppPhoton.Realtime;
 using MelonLoader;
 using MelonLoader.Pastel;
 
-namespace Patches;
+namespace JudePatch.Patches.Core;
 
     public static class PhotonNetworkPatch
     {

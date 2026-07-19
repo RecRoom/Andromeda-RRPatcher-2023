@@ -1,12 +1,11 @@
 using AndromedaEngine;
 using AndromedaEngine.RecRoom;
-using MelonLoader;
 using HarmonyLib;
 using Il2CppBestHTTP;
 using Il2CppOrg.BouncyCastle.Crypto.Tls;
-using Newtonsoft.Json;
 
-namespace Patches;
+
+namespace JudePatch.Patches.Core;
 
 public static class BestHttpPatches
 {

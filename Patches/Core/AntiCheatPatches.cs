@@ -1,11 +1,10 @@
-using System;
 using HarmonyLib;
 using Il2Cpp;
 using Il2CppRecRoom.AntiCheat;
-using MelonLoader;
+
 using MelonLoader.Pastel;
 
-namespace Patches;
+namespace JudePatch.Patches.Core;
 
 public class AntiCheatPatches
 {

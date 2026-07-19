@@ -1,6 +1,6 @@
 using HarmonyLib;
 
-namespace Patches;
+namespace JudePatch.Patches.Core;
 
 public static class RecNetPatches
 {

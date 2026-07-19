@@ -1,7 +1,5 @@
-using System.Reflection;
-using MelonLoader;
 using MelonLoader.Pastel;
-using UnityEngine;
+
 
 namespace AndromedaEngine;
 
@@ -53,6 +51,7 @@ public class Debug
         public static void Log(Exception e)
         {
             Log(e.Message + "\n", LogLevel.Error);
+           
             System.Console.Beep(356, 433);
         }
     }
