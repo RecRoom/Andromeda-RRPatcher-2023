@@ -3,6 +3,7 @@ using HarmonyLib;
 using Il2Cpp;
 using Il2CppPhoton.Realtime;
 using MelonLoader;
+using MelonLoader.Pastel;
 
 namespace Patches;
 
@@ -26,10 +27,11 @@ namespace Patches;
                         AppVersion = AppVersion,
                         FixedRegion = ALENEHILMJK
                     };
+                    AndromedaEngine.Debug.Console.Log($"[{"HarmonyPatch".Pastel("#FF3D00")}] PUNNetworkManager::OIMACPCFIKN -> (Photon Intercepted) \n");
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine(e);
+                    AndromedaEngine.Debug.Console.Log(e);
                 }
             }
         }
@@ -38,7 +40,6 @@ namespace Patches;
         {
             private static void Postfix(ref AppSettings __result)
             {
-                MelonLogger.Msg("Trying to fix: LEALBOODIEE.GBNKOFMAJPA");
                 try
                 {
                     __result = new AppSettings()
@@ -47,7 +48,7 @@ namespace Patches;
                         AppIdVoice = AppIdVoice,
                         AppVersion = AppVersion,
                     };
-                    MelonLogger.Msg("Fixed: LEALBOODIEE.GBNKOFMAJPA");
+                    AndromedaEngine.Debug.Console.Log($"[{"HarmonyPatch".Pastel("#FF3D00")}] LEALBOODIEE::GBNKOFMAJPA -> (Photon Intercepted) \n");
                 }
                 catch (Exception e)
                 {

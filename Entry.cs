@@ -1,19 +1,31 @@
-﻿
+﻿using System.Reflection;
+using AndromedaEngine;
 using MelonLoader;
 
-[assembly: MelonInfo(typeof(JudePatch.Entry),"JudePatch","1.0.0","Romance (Mostly Romance) & Puck",null)]
+[assembly: MelonInfo(typeof(JudePatch.Entry),"XPatch","1.0.0","Romance (Mostly Romance) & Puck",null)]
 
 namespace JudePatch;
 public class Entry : MelonMod
 {
   
-  HarmonyLib.Harmony Hook = new ("JudeJudeJudeJudeJudeJude");
+  
   public override void OnInitializeMelon()
   {
-      Hook.PatchAll();
+      MelonLoader.Pastel.ConsoleExtensions.Enable();
+      AndromedaEngine.Debug.Console.Log("Initialized! \n", Debug.Console.LogLevel.Debug);
+     
+      try
+      {
+          HarmonyLib.Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
+      }
+      catch (Exception e)
+      {
+          AndromedaEngine.Debug.Console.Log(e);
+      }
   }
+
   public override void OnApplicationQuit()
   {
-      Hook.UnpatchSelf();
+      HarmonyLib.Harmony.UnpatchAll();
   }
 }

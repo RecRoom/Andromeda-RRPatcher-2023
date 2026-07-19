@@ -3,6 +3,7 @@ using HarmonyLib;
 using Il2Cpp;
 using Il2CppRecRoom.AntiCheat;
 using MelonLoader;
+using MelonLoader.Pastel;
 
 namespace Patches;
 
@@ -14,7 +15,7 @@ public class AntiCheatPatches
         public static bool Prefix(ref string __result)
         {
             __result = "e";
-            MelonLogger.Msg("HIT!!! EACManager.GenerateChallengeResponse");
+            AndromedaEngine.Debug.Console.Log($"[{"HarmonyPatch".Pastel("#FF3D00")}] EACManager::GenerateChallengeResponse -> (Intercepted)\n");
             return false;
         }
     }
@@ -24,7 +25,7 @@ public class AntiCheatPatches
     {
         private static bool Prefix()
         {
-            MelonLogger.Msg("fuck you: CheatManager.Awake");
+            AndromedaEngine.Debug.Console.Log($"[{"HarmonyPatch".Pastel("#FF3D00")}] CheatManager::Awake -> (returned to false)\n");
             return false;
         }
     }

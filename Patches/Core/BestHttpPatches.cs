@@ -1,3 +1,5 @@
+using AndromedaEngine;
+using AndromedaEngine.RecRoom;
 using MelonLoader;
 using HarmonyLib;
 using Il2CppBestHTTP;
@@ -6,32 +8,33 @@ using Newtonsoft.Json;
 
 namespace Patches;
 
-public static class BestHttpPatch
+public static class BestHttpPatches
 {
-    
     [HarmonyPatch(typeof(HTTPManager), nameof(HTTPManager.SendRequest), new System.Type[] { typeof(HTTPRequest) })]
     internal class NameServer
     {
         private static void Prefix(ref HTTPRequest request)
         {
-
             try
             {
-                if(request.Uri.ToString().Contains("ns.rec.net"))    
+                if (request.Uri.ToString().Contains("ns.rec.net"))
                 {
-                    MelonLogger.Msg("Connecting To Jude Servers");
+                    AndromedaEngine.Debug.Console.Log("Connecting To Andromeda NameServer\n", Debug.Console.LogLevel.Debug);
                     request.Uri = new Il2CppSystem.Uri("https://gameauth.ddns.net");
                 }
-                MelonLogger.Msg($"Caught Request: {request.Uri.AbsoluteUri}");
+#if DEBUG
+                AndromedaEngine.RecRoom.CustomDebugger.Log($"Caught Request: {request.Uri.AbsoluteUri}\n", CustomDebugger.LogLevel.BestHttp);
+#endif
+
             }
             catch (Exception e)
             {
-                MelonLogger.Error($"Caught Exception: {e}");
+                AndromedaEngine.Debug.Console.Log(e);
             }
         }
     }
-    
-    [HarmonyPatch(typeof (LegacyTlsAuthentication), nameof(LegacyTlsAuthentication.NotifyServerCertificate))]
+
+    [HarmonyPatch(typeof(LegacyTlsAuthentication), nameof(LegacyTlsAuthentication.NotifyServerCertificate))]
     internal class AlwaysVerifyTLS
     {
         private static bool Prefix()
