@@ -1,0 +1,55 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\diver\\Documents\\Repos\\Gits\\JudePatch\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{06748CA1-0CDB-4B70-B8E8-DDBF345E03A6}|JudePatch.csproj|c:\\users\\diver\\documents\\repos\\gits\\judepatch\\judepatch.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{06748CA1-0CDB-4B70-B8E8-DDBF345E03A6}|JudePatch.csproj|solutionrelative:judepatch.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JudePatch",
+              "DocumentMoniker": "C:\\Users\\diver\\Documents\\Repos\\Gits\\JudePatch\\JudePatch.csproj",
+              "RelativeDocumentMoniker": "JudePatch.csproj",
+              "ToolTip": "C:\\Users\\diver\\Documents\\Repos\\Gits\\JudePatch\\JudePatch.csproj",
+              "RelativeToolTip": "JudePatch.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-07-21T03:56:12.834Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 377,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

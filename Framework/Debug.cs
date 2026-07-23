@@ -42,18 +42,26 @@ public class Debug
                     break;
                 case LogLevel.Error:
                     Base($"[{"Error".PastelBg("#FF0044")}] [{ApplicationId}] {message}");
+                    System.Console.Beep(356, 433);
                     break;
                 case LogLevel.Debug:
                     Base($"{"Debug".Pastel("#B47CFF").PastelBg("#300071")} [{ApplicationId}] {message}");
                     break;
             }
         }
-        public static void Log(Exception e)
+        public static void Exception(string id, Exception e)
+        {
+            Log( $"[{id}] "+ e.Message + "\n", LogLevel.Error);
+           
+            System.Console.Beep(356, 433);
+        }
+        public static void Exception(Exception e)
         {
             Log(e.Message + "\n", LogLevel.Error);
            
             System.Console.Beep(356, 433);
         }
+
     }
   
 }

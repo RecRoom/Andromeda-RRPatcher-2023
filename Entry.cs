@@ -1,19 +1,17 @@
-﻿using HarmonyLib;
+﻿using JudePatch.Utils;
 using MelonLoader;
+using MelonLoader.Pastel;
 
-[assembly: MelonInfo(typeof(JudePatch.Entry), "XPatch", "1.0.0", "Romance (Mostly Romance) & Puck", null)]
-
-namespace JudePatch;
+[assembly: MelonInfo(typeof(Entry), "RR.XPatch", "1.0.0", "Various Devs", null)]
 
 public class Entry : MelonMod
 {
-    private HarmonyLib.Harmony harmony = new("com.romance.xpatch");
-
+    private HarmonyLib.Harmony harmony = new("com.halo.xpatch");
+    
     public override void OnInitializeMelon()
     {
         try
         {
-            MelonLoader.Pastel.ConsoleExtensions.Enable();
             AndromedaEngine.Debug.Console.Log(
                 "Initialized!\n",
                 AndromedaEngine.Debug.Console.LogLevel.Debug
@@ -21,12 +19,30 @@ public class Entry : MelonMod
         }
         catch (Exception e)
         {
-            AndromedaEngine.Debug.Console.Log(e);
+            AndromedaEngine.Debug.Console.Exception(e);
         }
     }
-
-    public override void OnApplicationQuit()
+    
+    public override void OnSceneWasLoaded(int buildIndex, string sceneName)
     {
-        harmony.UnpatchSelf();
+        /*switch (buildIndex, sceneName)
+        {
+            
+            case (1,"2"): 
+                return;
+        }*/
+        AndromedaEngine.Debug.Console.Base($"" + 
+        $"[{"SceneManager".Gradient(System.Drawing.Color.Red, System.Drawing.Color.Blue)}]" +
+        $"{$" [{buildIndex}]".Gradient(System.Drawing.Color.Red, System.Drawing.Color.Blue)} " +
+        $" {sceneName} Loaded!\n");
     }
+
+    public override void OnSceneWasUnloaded(int buildIndex, string sceneName)
+    {
+        
+    }
+    
+    public override void OnApplicationQuit() =>
+        harmony.UnpatchSelf();
+   
 }

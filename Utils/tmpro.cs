@@ -1,6 +1,9 @@
 using Il2CppInterop.Runtime;
+using Il2CppInterop.Runtime.InteropTypes.Arrays;
 using Il2CppTMPro;
 using UnityEngine;
+using Object = UnityEngine.Object;
+
 namespace JudePatch.Utils;
 
 public class tmpro
@@ -8,7 +11,7 @@ public class tmpro
 
     public static void EnableAll()
     {
-        var objects = Resources.FindObjectsOfTypeAll(Il2CppType.Of<TMP_Text>());
+        Il2CppReferenceArray<Object>? objects = Resources.FindObjectsOfTypeAll(Il2CppType.Of<TMP_Text>());
 
         AndromedaEngine.RecRoom.CustomDebugger.Log($"Found: {objects.Length}");
 
@@ -20,10 +23,6 @@ public class tmpro
                 continue;
             
             text.richText = true;
-            if (text.text.Contains("Saija"))
-            {
-                text.SetText("<color=red>Saija</color>");
-            }
             AndromedaEngine.RecRoom.CustomDebugger.Log(
                 $"Caught TMPro::{text.gameObject.name}"
             );

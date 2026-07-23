@@ -1,6 +1,8 @@
 #if DEBUG
 
 using HarmonyLib;
+using Il2CppAGUI.StackedUI;
+using Il2CppRecRoom.Core;
 using Il2CppRecRoom.Players;
 using JudePatch.Patches.Misc;
 using JudePatch.Utils;
@@ -33,14 +35,35 @@ public class DebugCommands
                     switch (type)
                     {
                         case "skin":
-                            GameUtils.Avatar.CreateAvatarColor(SkinColorPatch.Vault, guid, color);
+                            if (ColorVaultPatch.SkinColorVault != null)
+                                GameUtils.Avatar.CreateAvatarColor(ColorVaultPatch.SkinColorVault, guid, color);
+                            GameUtils.Chatbox.MessagePlayerLocal(0,"<color=#7e9efc>[Andromeda]</color>","Skin created!");
                             break;
 
                         case "hair":
-                            GameUtils.Avatar.CreateAvatarColor(HairColorPatch.Vault, guid, color);
+                            if (ColorVaultPatch.HairColorVault != null)
+                                GameUtils.Avatar.CreateAvatarColor(ColorVaultPatch.HairColorVault, guid, color);
+                            GameUtils.Chatbox.MessagePlayerLocal(0,"<color=#7e9efc>[Andromeda]</color>","Hair created!");
                             break;
                     }
                 }
+                
+            }
+            if (__0.StartsWith("/radio beta.customtracks"))
+            {
+                /*string data = __0.Replace("/radio allow_customtracks", "");
+                string[] args = data.Split(',');
+                string status = args[0].Trim();*/
+                
+                
+            }
+            if (__0.Equals("/help"))
+            {
+                GameUtils.Chatbox.MessagePlayerLocal(0,"<color=#7e9efc>[Andromeda]</color>","<color=red>DebugConsole</color>");
+            }
+            if (__0.Equals("/c avatar"))
+            {
+                WatchUI.CKJDMNFGDPD.HPLKAJMLDCC.TryCast<RRUIRootScreen>().ShowScreenAndGoToAvatarCustomization();
             }
             #endregion
            

@@ -4,9 +4,9 @@ namespace AndromedaEngine.RecRoom;
 
 public class CustomDebugger
 {
-    public class ColorFlags 
+    public class ColorFlags
     {
-      
+        public const string SceneManager = "#ff0049";
         public const string RecNet = "#FF4F00";
         public const string MasterServerColor = "#CC0089";
         public const string GameServerColor = "#153EB8";

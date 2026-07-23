@@ -1,4 +1,5 @@
 #if DEBUG
+using System.Reflection;
 using AndromedaEngine.RecRoom;
 using HarmonyLib;
 using Il2CppExitGames.Client.Photon;
@@ -6,6 +7,7 @@ using MelonLoader.Pastel;
 
 namespace JudePatch.Patches.Developer.Debugging;
 
+[Obfuscation(Exclude = true, ApplyToMembers =  true)]
 [HarmonyPatch(typeof(PhotonPeer), nameof(PhotonPeer.SendOperation))]
 public class PhotonPeerPatch
 {

@@ -1,12 +1,13 @@
 #if  DEBUG
+using System.Reflection;
 using System.Text;
 using AndromedaEngine.RecRoom;
 using HarmonyLib;
 using Il2Cpp;
 using MelonLoader.Pastel;
-
 namespace JudePatch.Patches.Developer.Debugging;
 
+[Obfuscation(Exclude = true, ApplyToMembers =  true)]
 [HarmonyPatch(typeof(Il2Cpp.IMEBNJHGJBJ), nameof(IMEBNJHGJBJ.OBGCIMIGCHP))]
 public class PhotonViewPatch
 {

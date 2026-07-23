@@ -1,12 +1,8 @@
 [
-  {
-    "Type": "Hair",
-    "ColorGuid": "",
-    "Value": "#befc03"
-  },
-  {
-    "Type": "Hair",
-    "ColorGuid": "",
-    "Value": "#befc03"
-  }
+{"Type":"Skin","ColorGuid":"927dc70e9a1845c283aff73cc82afa3d","Value":"#000000"},
+{"Type":"Skin","ColorGuid":"ae5daf64bc4e412d9264242072e6f7ea","Value":"#000001"},
+{"Type":"Skin","ColorGuid":"4dc0cc4f4a3647ce91990bf044c27590","Value":"#000002"},
+{"Type":"Skin","ColorGuid":"0421d1c8ddaa44e9b0b2d29484d62bf0","Value":"#000003"},
+{"Type":"Skin","ColorGuid":"f125e9648a5a499e9b4e4b8f4439eee6","Value":"#000004"},
+{"Type":"Skin","ColorGuid":"9c7b64bcd7ef49068be8b131f142dfcc","Value":"#000005"}
 ]

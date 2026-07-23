@@ -5,6 +5,7 @@ using Il2CppRecRoom.Core.Locomotion;
 namespace JudePatch.Patches.Developer;
 
 #if DEBUG
+
 [HarmonyPatch(typeof(PlayerMovement), nameof(PlayerMovement.AddFlyEnabled))]
 public class PlayerMovementPatch
 {
