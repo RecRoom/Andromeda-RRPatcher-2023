@@ -2,7 +2,8 @@ namespace JudePatch.Development.Tester;
 
 public class DebugCommandConfig
 {
-    Dictionary<string, Action> commands;
+    
+    Dictionary<string, DebugCommand> commands = new();
     public DebugCommandConfig()
     {
         
