@@ -15,9 +15,15 @@ public class DebugConsoleManager : MonoBehaviour
         if (Instance == null)
         {
             new GameObject("DebugConsoleManager").AddComponent<DebugConsoleManager>();
-            this = Instance;
+            Instance = this;
         }
     }
+
+    public void Update()
+    {
+        
+    }
+    
     public static void Search()
     {
         
