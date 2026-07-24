@@ -73,6 +73,9 @@
         <Reference Include="Il2CppRecRoom.Assetbundles.Runtime">
           <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppRecRoom.Assetbundles.Runtime.dll</HintPath>
         </Reference>
+        <Reference Include="Il2CppRecRoom.Creation.Interfaces.UX.Runtime">
+          <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppRecRoom.Creation.Interfaces.UX.Runtime.dll</HintPath>
+        </Reference>
         <Reference Include="Il2CppRecRoom.Datastructures.OverridableFields.Runtime">
           <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\content\app_471710\depot_471711\MelonLoader\Il2CppAssemblies\Il2CppRecRoom.Datastructures.OverridableFields.Runtime.dll</HintPath>
         </Reference>

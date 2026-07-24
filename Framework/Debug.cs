@@ -1,3 +1,8 @@
+using Il2Cpp;
+using Il2CppRecRoom.Core;
+using Il2CppRecRoom.Debugging;
+using Il2CppRecRoom.Tools;
+using Il2CppRRUI.Data;
 using MelonLoader.Pastel;
 
 
@@ -24,10 +29,12 @@ public class Debug
 
         public static void Base(string output)
         {
+           
             System.Console.Write($"[{DateTime.UtcNow.ToString("HH:mm:ss").Pastel("#86e888")}] {output} ");
         }
         public static void Log(string message = "", LogLevel level = LogLevel.None)
         {
+            
             string ApplicationId = "Andromeda";
             switch (level)
             {

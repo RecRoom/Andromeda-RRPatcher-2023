@@ -1,4 +1,6 @@
-﻿using JudePatch.Utils;
+﻿using Il2CppBestHTTP.SignalRCore;
+using Il2CppBestHTTP.SignalRCore.Messages;
+using JudePatch.Utils;
 using MelonLoader;
 using MelonLoader.Pastel;
 
@@ -12,6 +14,8 @@ public class Entry : MelonMod
     {
         try
         {
+       
+            
             AndromedaEngine.Debug.Console.Log(
                 "Initialized!\n",
                 AndromedaEngine.Debug.Console.LogLevel.Debug
