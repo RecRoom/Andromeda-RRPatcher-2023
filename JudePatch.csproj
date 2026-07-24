@@ -112,6 +112,12 @@
         <Reference Include="Il2CppRecRoom.RRUI.Navigation.Runtime">
           <HintPath>Libs\Il2CppRecRoom.RRUI.Navigation.Runtime.dll</HintPath>
         </Reference>
+        <Reference Include="Il2CppRecRoom.RRUI.Navigation.Runtime">
+            <HintPath>Libs\Il2CppRecRoom.RRUI.Theme.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppRecRoom.RRUI.Theme.Runtime">
+          <HintPath>Libs\Il2CppRecRoom.RRUI.Theme.Runtime.dll</HintPath>
+        </Reference>
         <Reference Include="Il2CppStatsigUnity.Runtime">
           <HintPath>Libs\Il2CppStatsigUnity.Runtime.dll</HintPath>
         </Reference>
@@ -205,7 +211,6 @@
     </ItemGroup>
     <ItemGroup>
       <Folder Include="Framework\IMGUI\" />
-      <Folder Include="Libs\" />
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="System.Security.Permissions" Version="11.0.0-preview.6.26359.118" />

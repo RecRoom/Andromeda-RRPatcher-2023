@@ -1,5 +1,8 @@
 ﻿using Il2CppBestHTTP.SignalRCore;
 using Il2CppBestHTTP.SignalRCore.Messages;
+using Il2CppInterop.Runtime.Injection;
+using Il2CppRecRoom.Debugging;
+using JudePatch.Development.Tester;
 using JudePatch.Utils;
 using MelonLoader;
 using MelonLoader.Pastel;
@@ -12,6 +15,7 @@ public class Entry : MelonMod
     
     public override void OnInitializeMelon()
     {
+        ClassInjector.RegisterTypeInIl2Cpp<DebugConsoleManager>();
         try
         {
        
