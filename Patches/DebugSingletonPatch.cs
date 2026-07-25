@@ -1,36 +1,21 @@
-using AndromedaEngine;
 using HarmonyLib;
-using Il2CppCodeStage.AntiCheat.ObscuredTypes;
-using Il2CppRecRoom.Debugging;
-using Il2CppRecRoom.Systems.PlayerRoles;
-using Il2CppRecRoom.Tools;
-using Il2CppRRUI.Data;
 
 namespace JudePatch.Patches;
-/*[HarmonyPatch(typeof(DebugSingleton), nameof(DebugSingleton.INJIGLBOGBI))]
-public class DebugSingletonPatch
+[HarmonyPatch(typeof(UnityEngine.Debug), nameof(UnityEngine.Debug.isDebugBuild), MethodType.Getter)]
+public class DebugSingletonPatch2
 {
-    public static bool Prefix(ref bool __result)
+    public static bool Prefix(bool __result)
     {
         __result = true;
-        return false;
-    }
-}*/
-[HarmonyPatch(typeof(GlobalModel), nameof(GlobalModel.IsDebugBuild), MethodType.Getter)]
-public class DebugSingletonPatch1
-{
-    public static bool Prefix(ref bool __result)
-    {
         return false;
     }
 }
-[HarmonyPatch(typeof(MakerPen), nameof(MakerPen.CanPlayerCreateWithMakerPen))]
-public class DebugSingletonPatch2
+[HarmonyPatch(typeof(UnityEngine.Debug), nameof(UnityEngine.Debug.developerConsoleVisible), MethodType.Setter)]
+public class DebugSingletonPatch3
 {
-    public static bool Prefix(ref bool __result)
+    public static bool Prefix(ref bool value)
     {
-        Debug.Console.Log($"[MP] -> {__result}", Debug.Console.LogLevel.Info);
-        __result = true;
+        value = true;
         return false;
     }
 }

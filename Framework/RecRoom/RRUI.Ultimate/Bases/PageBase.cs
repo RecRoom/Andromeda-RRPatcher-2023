@@ -6,11 +6,11 @@ public class PageBase
 {
     public static PageWrapper? PageDebugUI()
     {
-        foreach (var VARIABLE in UnityEngine.Object.FindObjectsOfType<PageWrapper>())
+        foreach (PageWrapper DevPage in UnityEngine.Object.FindObjectsOfType<PageWrapper>())
         {
-            if (VARIABLE.name.StartsWith("Page: (DebugCommandsDevToolsPage)") && VARIABLE.name.EndsWith("(Clone)"))
+            if (DevPage.name.StartsWith("Page: (DebugCommandsDevToolsPage)") && DevPage.name.EndsWith("(Clone)"))
             {
-                return VARIABLE;
+                return DevPage;
             }
         }
         return null;

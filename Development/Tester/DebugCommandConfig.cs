@@ -1,11 +1,16 @@
+using System.Diagnostics;
+
 namespace JudePatch.Development.Tester;
 
 public class DebugCommandConfig
 {
     
-    Dictionary<DebugCommand, Action> commands = new();
-    public DebugCommandConfig()
-    {
-        
-    }
+    public Dictionary<DebugCommand, Action> commands;
+    
+    public void Register(DebugCommand command, Action action) => 
+        commands.Add(command, action);
+
+    /*public static void Unregister(DebugCommand command) =>  
+        commands.Remove(command);*/
+
 }

@@ -12,11 +12,12 @@ public class ButtonBase
 
     public static GameObject? DebugButton()
     {
-        foreach (var VARIABLE in UnityEngine.Object.FindObjectsOfType<Transform>(true))
+        foreach (var DebugButton in UnityEngine.Object.FindObjectsOfType<Transform>(true))
         {
-            if (VARIABLE.name == "Debug" && VARIABLE.transform.parent.name == "Dev Tools")
+            if (DebugButton.name == "Debug" && DebugButton.transform.parent.name == "Dev Tools")
             {
-                return VARIABLE.gameObject;
+                DebugButton.gameObject.SetActive(true);
+                return DebugButton.gameObject;
             }
 
           
