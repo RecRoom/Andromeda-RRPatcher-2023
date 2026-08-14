@@ -27,12 +27,15 @@ namespace JudePatch.Patches.Core;
                 {
                     __result = new AppSettings()
                     {
+                        #region PhotonServerApp
+
                         AppIdRealtime = AppIdRealtime,
                         AppIdVoice = AppIdVoice,
                         AppVersion = AppVersion,
                         FixedRegion = ALENEHILMJK,
-                        /*UseNameServer = false,
-                        Port = 5055*/
+
+                        #endregion
+                        
                         NetworkLogging = DebugLevel.ALL
                     };
                     AndromedaEngine.Debug.Console.Log($"[{"HarmonyPatch".Pastel("#FF3D00")}] PUNNetworkManager::OIMACPCFIKN -> (Photon Intercepted) \n");

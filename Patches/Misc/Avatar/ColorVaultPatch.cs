@@ -26,13 +26,13 @@ public class ColorVaultPatch
                 if (__instance != null)
                 {
 
-                    var bytes = JudePatch.Properties.Resources.ColorVault; // already byte[]
-                    var json = System.Text.Encoding.UTF8.GetString(bytes);
-                    var dataModels = JsonConvert.DeserializeObject<List<ColorVaultDTO>>(json);
+                    byte[] bytes = Properties.Resources.ColorVault; 
+                    string json = System.Text.Encoding.UTF8.GetString(bytes);
+                    List<ColorVaultDTO>? dataModels = JsonConvert.DeserializeObject<List<ColorVaultDTO>>(json);
 
-                    foreach (var data in dataModels)
+                    foreach (var data in dataModels!)
                     {
-                        if (data.Type.Contains("Skin"))
+                        if (data.Type == "Skin")
                         {
                             if (ColorUtility.TryParseHtmlString(data.Value, out var color))
                             {

@@ -85,6 +85,12 @@
         <Reference Include="Il2CppRecRoom.Datastructures.Singletons.Runtime">
           <HintPath>Libs\Il2CppRecRoom.Datastructures.Singletons.Runtime.dll</HintPath>
         </Reference>
+        <Reference Include="Il2CppRecRoom.Debugging.Runtime">
+          <HintPath>Libs\Il2CppRecRoom.Debugging.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppRecRoom.FuzzySearch.Runtime">
+          <HintPath>Libs\Il2CppRecRoom.FuzzySearch.Runtime.dll</HintPath>
+        </Reference>
         <Reference Include="Il2CppRecRoom.Imageutils.Runtime">
           <HintPath>Libs\Il2CppRecRoom.Imageutils.Runtime.dll</HintPath>
         </Reference>

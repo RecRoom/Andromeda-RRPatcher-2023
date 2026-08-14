@@ -1,4 +1,5 @@
 using HarmonyLib;
+using Il2CppRecRoom.Debugging;
 
 namespace JudePatch.Patches;
 [HarmonyPatch(typeof(UnityEngine.Debug), nameof(UnityEngine.Debug.isDebugBuild), MethodType.Getter)]
@@ -16,6 +17,15 @@ public class DebugSingletonPatch3
     public static bool Prefix(ref bool value)
     {
         value = true;
+        return false;
+    }
+}
+[HarmonyPatch(typeof(DebugConsole), nameof(DebugConsole.GJOLLPKNCLC), MethodType.Getter)]
+public class DebugSingletonPatch5
+{
+    public static bool Prefix(ref bool __result)
+    {
+        __result = true;
         return false;
     }
 }

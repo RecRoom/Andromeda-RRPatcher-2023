@@ -1,8 +1,3 @@
-using Il2Cpp;
-using Il2CppRecRoom.Core;
-using Il2CppRecRoom.Debugging;
-using Il2CppRecRoom.Tools;
-using Il2CppRRUI.Data;
 using MelonLoader.Pastel;
 
 
